@@ -1,0 +1,43 @@
+<template>
+        <lightning-card title="Product Traceability Scanner" icon-name="standard:search">
+            <div class="slds-m-around_medium">
+                <lightning-input label="Enter Barcode" onchange={handleBarcodeChange} value={barcode}></lightning-input>
+                <div class="slds-m-top_small">
+                    <lightning-button label="Scan" variant="brand" onclick={handleScan}></lightning-button>
+                </div>
+            </div>
+
+            <div if:true={lotRecord}>
+                <div class="slds-m-around_medium">
+                    <h2 class="slds-text-heading_medium slds-m-bottom_small">Lot Details</h2>
+                    <p><strong>Lot Name:</strong> {lotRecord.Name}</p>
+                    <p><strong>Barcode:</strong> {lotRecord.Barcode__c}</p>
+                </div>
+                
+                <div if:true={lotRecord.Shipments__r}>
+                    <div class="slds-m-around_medium">
+                        <h2 class="slds-text-heading_medium slds-m-bottom_small">Shipment History</h2>
+                        <ul class="slds-list_dotted">
+                            <template for:each={lotRecord.Shipments__r} for:item="shipment">
+                                <li key={shipment.Id}>
+                                    Shipment {shipment.Name}: {shipment.Quantity__c} units shipped
+                                </li>
+                            </template>
+                        </ul>
+                    </div>
+                </div>
+
+                <div if:true={lotRecord.Retail_Locations__r}>
+                    <div class="slds-m-around_medium">
+                        <h2 class="slds-text-heading_medium slds-m-bottom_small">Current Location</h2>
+                        <template for:each={lotRecord.Retail_Locations__r} for:item="location">
+                            <p key={location.Id}><strong>Location Name:</strong> {location.Name}</p>
+                        </template>
+                    </div>
+                </div>
+            </div>
+            <div if:true={error} class="slds-m-around_medium">
+                <p class="slds-text-color_error">Error: {error}</p>
+            </div>
+        </lightning-card>
+    </template>

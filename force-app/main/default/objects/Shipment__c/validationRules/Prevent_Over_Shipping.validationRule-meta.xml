@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Over_Shipping</fullName>
+    <active>true</active>
+    <description>Prevents a shipment&apos;s quantity from exceeding the available quantity of its associated lot.</description>
+    <errorConditionFormula>Quantity__c  &gt;  Lot__r.Quantity__c</errorConditionFormula>
+    <errorDisplayField>Quantity__c</errorDisplayField>
+    <errorMessage>The shipment quantity cannot exceed the available quantity of the associated lot.</errorMessage>
+</ValidationRule>

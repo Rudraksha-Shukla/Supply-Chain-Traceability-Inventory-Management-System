@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Job_Role__c</fullName>
+    <externalId>false</externalId>
+    <label>Job Role</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Qualification__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Developer</fullName>
+                <default>false</default>
+                <label>Developer</label>
+            </value>
+            <value>
+                <fullName>Full-Stack development</fullName>
+                <default>false</default>
+                <label>Full-Stack development</label>
+            </value>
+            <value>
+                <fullName>Salesforce admin</fullName>
+                <default>false</default>
+                <label>Salesforce admin</label>
+            </value>
+            <value>
+                <fullName>Sr developor</fullName>
+                <default>false</default>
+                <label>Sr developor</label>
+            </value>
+            <value>
+                <fullName>manger</fullName>
+                <default>false</default>
+                <label>manger</label>
+            </value>
+            <value>
+                <fullName>Hr manager</fullName>
+                <default>false</default>
+                <label>Hr manager</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Graduate</controllingFieldValue>
+            <valueName>Developer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Graduate</controllingFieldValue>
+            <valueName>Full-Stack development</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Post-graduate</controllingFieldValue>
+            <valueName>Salesforce admin</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>under-graduate</controllingFieldValue>
+            <valueName>Sr developor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Diploma</controllingFieldValue>
+            <valueName>manger</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Diploma</controllingFieldValue>
+            <valueName>Hr manager</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

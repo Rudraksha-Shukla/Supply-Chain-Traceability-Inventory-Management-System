@@ -1,0 +1,20 @@
+<template>
+        <lightning-card title="Low Inventory Dashboard" icon-name="standard:dashboard">
+            <div class="slds-m-around_medium">
+                <p if:true={hasRecords}>The following products have low inventory and need to be reordered:</p>
+                <ul class="slds-list_dotted">
+                    <template for:each={lowInventoryItems} for:item="item">
+                        <li key={item.Id}>
+                            <p><strong>Name:</strong> {item.Name}</p>
+                            <p><strong>Inventory:</strong> {item.Current_Inventory__c}</p>
+                            <p><strong>Type:</strong> {item.sobjectType}</p>
+                        </li>
+                    </template>
+                </ul>
+                <p if:false={hasRecords}>No low inventory items found.</p>
+                <div if:true={error} class="slds-m-top_small">
+                    <p class="slds-text-color_error">Error: {error}</p>
+                </div>
+            </div>
+        </lightning-card>
+</template>
