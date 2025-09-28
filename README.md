@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Salesforce DX Project: Next Steps
 
 Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
@@ -16,3 +17,16 @@ The `sfdx-project.json` file contains useful configuration information for your 
 - [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
 - [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
 - [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+=======
+                                       Supply Chain Traceability & Inventory Management System
+
+Problem: A food or retail company needs to track products from their origin (farm or factory) to the final customer to ensure quality and address recalls quickly. 
+Current systems lack a unified view of the entire supply chain. 
+
+Salesforce Solution: Create a system that provides end-to-end visibility of a product's journey.
+
+
+
+
+DEMO VIDEO :-- https://docs.google.com/videos/d/1vCcjf2rXqJBDVNk1oQuM7_KufNrFWJ10q7pRuVp5qwA/edit?usp=drive_link
+>>>>>>> 410f1d95712ab6cbe8d2f1a7811ecfb3adcdf92d
